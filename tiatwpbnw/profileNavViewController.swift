@@ -12,6 +12,10 @@ class profileNavViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+self.navigationBar.backgroundColor = #colorLiteral(red: 0.289869281, green: 0.2431372549, blue: 0.8039215686, alpha: 1)
+        self.navigationItem.titleView?.backgroundColor = #colorLiteral(red: 0.289869281, green: 0.2431372549, blue: 0.8039215686, alpha: 1)
+        
+       // self.navigationItem.titleView?.backgroundColor = #colorLiteral(red: 0.289869281, green: 0.2431372549, blue: 0.8039215686, alpha: 1)
 
         // Do any additional setup after loading the view.
     }

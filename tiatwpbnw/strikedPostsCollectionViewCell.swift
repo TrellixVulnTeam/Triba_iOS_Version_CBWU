@@ -9,5 +9,8 @@
 import UIKit
 
 class strikedPostsCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var lblRemovalReason: UILabel!
+    
+    @IBOutlet weak var lblPostTextt: UILabel!
     
 }

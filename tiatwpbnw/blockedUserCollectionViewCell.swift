@@ -9,5 +9,8 @@
 import UIKit
 
 class blockedUserCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var btnUnblock: UIButton!
     
+    @IBOutlet weak var lblUsername: UILabel!
+    @IBOutlet weak var lblBanDate: UILabel!
 }

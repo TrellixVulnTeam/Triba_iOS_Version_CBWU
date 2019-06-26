@@ -7,3 +7,11 @@
 //
 
 import Foundation
+class sharedData {
+    struct ModelData {
+        static var bubbleLats:[String] = []
+
+    }
+    
+    
+}

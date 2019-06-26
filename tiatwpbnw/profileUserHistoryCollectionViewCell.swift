@@ -10,4 +10,9 @@ import UIKit
 
 class profileUserHistoryCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var lblPostText: UILabel!
+    @IBOutlet weak var btnDeactivate: UIButton!
+    
+    @IBOutlet weak var lblPostText2: UILabel!
+    @IBOutlet weak var lblPostText1: UILabel!
 }

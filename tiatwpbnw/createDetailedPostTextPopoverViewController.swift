@@ -10,9 +10,36 @@ import UIKit
 
 class createDetailedPostTextPopoverViewController: UIViewController {
 
+    weak var mDelegate: filleTextViewDelegate?
+    
+    var textBoxNum:Int?
+    var txtTextboxText:String?
+    
+    @IBOutlet weak var txtEnteredText: UITextView!
+    @IBAction func btnEnterText(_ sender: Any) {
+        //mDelegate?.fillTextview(filledData: "victory")
+        mDelegate?.fillTextview(filledData: txtEnteredText.text, boxNum: textBoxNum ?? 1)
+
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func btnClosePopover(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        txtEnteredText.becomeFirstResponder()
 
+        if(textBoxNum?.description.isEmpty ?? true){
+            textBoxNum = 1
+        }
+        
+        if(!(txtTextboxText?.isEmpty)!){
+            txtEnteredText.text = txtTextboxText
+        }
         // Do any additional setup after loading the view.
     }
     

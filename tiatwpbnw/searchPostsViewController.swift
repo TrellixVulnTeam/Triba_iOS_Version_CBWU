@@ -9,7 +9,28 @@
 import UIKit
 
 class searchPostsViewController: UIViewController {
-
+    @IBOutlet weak var txtSearchTerm: UITextField!
+    @IBAction func btnSearch(_ sender: Any) {
+ 
+   
+   
+        
+        //let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        //let newViewController = storyBoard.instantiateViewController(withIdentifier: "chatHomeViewController")
+         
+        
+       let myVC = storyboard?.instantiateViewController(withIdentifier: "pushTestAViewController") as! pushTestAViewController
+        self.navigationController?.pushViewController(myVC, animated: true)
+ 
+        /*
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "HiViewController")
+        self.present(newViewController, animated: true, completion: nil)
+      */
+        
+    }
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 

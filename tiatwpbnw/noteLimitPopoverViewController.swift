@@ -9,12 +9,23 @@
 import UIKit
 
 class noteLimitPopoverViewController: UIViewController {
-
+    @IBOutlet weak var viewPopover: UIView!
+    
+    @IBAction func btnClosePopover(_ sender: Any) {
+        
+        removeAnimate()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.9)
 
-        // Do any additional setup after loading the view.
-    }
+        
+        showAnimate()
+        
+        viewPopover.layer.masksToBounds = true
+        viewPopover.layer.cornerRadius = 8;
+        viewPopover.layer.borderColor =  #colorLiteral(red: 0.3278279901, green: 0.3278364539, blue: 0.3278318942, alpha: 1)
+        viewPopover.layer.borderWidth = 1    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -22,14 +33,27 @@ class noteLimitPopoverViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func showAnimate()
+    {
+        self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        self.view.alpha = 0.0;
+        UIView.animate(withDuration: 0.25, animations: {
+            self.view.alpha = 1.0
+            self.view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        });
     }
-    */
+    
+    func removeAnimate()
+    {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.view.alpha = 0.0;
+        }, completion:{(finished : Bool)  in
+            if (finished)
+            {
+                self.view.removeFromSuperview()
+            }
+        });
+    }
 
 }

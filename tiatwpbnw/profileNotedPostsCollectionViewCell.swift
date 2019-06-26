@@ -10,4 +10,6 @@ import UIKit
 
 class profileNotedPostsCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var btnRemovePost: UIButton!
+    @IBOutlet weak var lblPostTitle: UILabel!
 }

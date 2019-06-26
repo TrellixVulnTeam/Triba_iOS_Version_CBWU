@@ -9,5 +9,6 @@
 import UIKit
 
 class reportPostCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var txtReportType: UILabel!
     
 }

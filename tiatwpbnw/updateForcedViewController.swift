@@ -10,12 +10,39 @@ import UIKit
 
 class updateForcedViewController: UIViewController {
 
+    
+    @IBOutlet weak var backgroundView: UIView!
+    
+    @IBOutlet weak var lblBackText: UILabel!
+    
+    var passedURL:String = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        lblBackText.setTextColorToGradient(image: #imageLiteral(resourceName: "backgroundTextTriba"))
+        backgroundView.alpha = CGFloat(0.25)
+  
+    
     }
 
+    @IBOutlet weak var lblNeededVersion: UILabel!
+    @IBOutlet weak var lblCurrentVersion: UILabel!
+    @IBAction func btnGoToUpdate(_ sender: Any) {
+        guard let url = URL(string: passedURL) else {
+            return //be safe
+        }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+
+        
+    }
+    
+    
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

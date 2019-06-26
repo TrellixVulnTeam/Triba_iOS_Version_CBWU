@@ -9,7 +9,42 @@
 import UIKit
 
 class testyViewController: UIViewController {
-
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        (self.tabBarController as! homeTabBar).centerButtonAppear();
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(animated);
+        //  menuButton.isHidden = true
+        //menuButton.backgroundColor = #colorLiteral(red: 0.289869281, green: 0.2431372549, blue: 0.8039215686, alpha: 1)
+        //self.view.viewWithTag(1119)?.isHidden = true
+      
+        
+        //(self.tabBarController as! homeTabBar).centerButtonDisappear();
+        
+        
+        //self.hidesBottomBarWhenPushed = false;
+        //   (self.tabBarController as! CustomTabBarController).hideCenterButton();
+        
+    }
+    
+    @IBAction func selectorY(_ sender: segmentFoundationUIView) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            print("0")
+        case 1:
+            print("1")
+        default:
+            print("hi")
+        }
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

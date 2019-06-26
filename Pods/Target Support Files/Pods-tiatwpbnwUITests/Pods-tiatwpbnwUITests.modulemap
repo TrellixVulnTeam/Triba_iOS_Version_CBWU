@@ -1,0 +1,6 @@
+framework module Pods_tiatwpbnwUITests {
+  umbrella header "Pods-tiatwpbnwUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
